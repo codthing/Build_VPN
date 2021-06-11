@@ -20,7 +20,12 @@ chmod +x shadowsocks-all.sh
 
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 
-//备用地址安装
+```
+
+> 备用地址安装
+
+```base
+
 yum -y install wget
 
 wget --no-check-certificate -O shadowsocks-all.sh https://www.zhuguodong.com/ss/shadowsocks-4/shadowsocks-all.sh
