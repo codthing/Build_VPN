@@ -14,11 +14,21 @@ xshell
 ```
 yum -y install wget
 
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/quniu/shadowsocks-all/master/install/shadowsocks-all.sh
 
 chmod +x shadowsocks-all.sh
 
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+
+//备用地址安装
+yum -y install wget
+
+wget --no-check-certificate -O shadowsocks-all.sh https://www.zhuguodong.com/ss/shadowsocks-4/shadowsocks-all.sh
+
+chmod +x shadowsocks-all.sh
+
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+
 ```
 
 ### 选择（推荐）
