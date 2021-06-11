@@ -28,7 +28,7 @@ chmod +x shadowsocks-all.sh
 
 yum -y install wget
 
-wget --no-check-certificate -O shadowsocks-all.sh https://www.zhuguodong.com/ss/shadowsocks-4/shadowsocks-all.sh
+wget --no-check-certificate -O shadowsocks-all.sh https://gitee.com/ShangMengZhi/teddysunss/blob/master/shadowsocks-all.sh
 
 chmod +x shadowsocks-all.sh
 
