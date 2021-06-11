@@ -22,20 +22,6 @@ chmod +x shadowsocks-all.sh
 
 ```
 
-> 备用地址安装
-
-```base
-
-yum -y install wget
-
-wget --no-check-certificate -O shadowsocks-all.sh https://pan.baidu.com/s/1pkheKgnrLtA8GC7StkCLoA 
-
-chmod +x shadowsocks-all.sh
-
-./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
-
-```
-
 ### 选择（推荐）
 
 shadowsocks server = shadowsocks libev
