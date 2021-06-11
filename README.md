@@ -14,7 +14,7 @@ xshell
 ```
 yum -y install wget
 
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/quniu/shadowsocks-all/master/install/shadowsocks-all.sh
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 
 chmod +x shadowsocks-all.sh
 
