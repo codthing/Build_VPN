@@ -34,39 +34,7 @@ cipher = xchacha20-ieft-poly1305
 
 # KVM 加速方式
 
-### 1. 魔改 BBR （推荐）
-
-1）  ```wget --no-check-certificate https://raw.githubusercontent.com/tcp-nanqinlang/general/master/General/CentOS/bash/tcp_nanqinlang-1.3.2.sh```
-
-2）  ```bash tcp_nanqinlang-1.3.2.sh```
-
-3） 选择 1内核
-
-4）  ```reboot```
-
-5）  ```bash tcp_nanqinlang-1.3.2.sh```
-
-6） 选择 2算法
-
-### 2. BBR
-
-wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
-
-chmod +x bbr.sh
-
-./bbr.sh
-
-最后输入y重启服务器或者手动输入代码reboot
-
-### 3. 锐速
-
-wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder-v.sh && bash serverspeeder-v.sh CentOS/6.6/2.6.32-573.1.1.el6.x86_64/x64/3.11.20.4/0/serverspeeder_3228
-
-如果未启动则(一般情况都是running的)
-
-/serverspeeder/bin/serverSpeeder.sh start
-
-### 4. teddysun 秋水逸冰
+### 1. teddysun 秋水逸冰 (首选推荐)
 
 ```base
 
@@ -120,6 +88,38 @@ lsmod | grep bbr
 ```base
 mount -o remount rw /
 ```
+
+### 2. 魔改 BBR （次选推荐）
+
+1）  ```wget --no-check-certificate https://raw.githubusercontent.com/tcp-nanqinlang/general/master/General/CentOS/bash/tcp_nanqinlang-1.3.2.sh```
+
+2）  ```bash tcp_nanqinlang-1.3.2.sh```
+
+3） 选择 1内核
+
+4）  ```reboot```
+
+5）  ```bash tcp_nanqinlang-1.3.2.sh```
+
+6） 选择 2算法
+
+### 3. BBR
+
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+
+chmod +x bbr.sh
+
+./bbr.sh
+
+最后输入y重启服务器或者手动输入代码reboot
+
+### 4. 锐速
+
+wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder-v.sh && bash serverspeeder-v.sh CentOS/6.6/2.6.32-573.1.1.el6.x86_64/x64/3.11.20.4/0/serverspeeder_3228
+
+如果未启动则(一般情况都是running的)
+
+/serverspeeder/bin/serverSpeeder.sh start
 
 ----------------------------------------------------------------------------
 
