@@ -66,6 +66,61 @@ wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master
 
 /serverspeeder/bin/serverSpeeder.sh start
 
+### 4. teddysun 秋水逸冰
+
+```base
+
+wget --no-check-certificate -O /opt/bbr.sh https://github.com/teddysun/across/raw/master/bbr.sh
+chmod 755 /opt/bbr.sh
+/opt/bbr.sh
+
+```
+
+安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
+
+1) 重启完成后，进入 VPS，验证一下是否成功安装最新内核并开启 TCP BBR，输入以下检查：
+
+```base
+uname -r
+```
+
+2) 查看内核版本，显示为新版内核就表示 OK 了。
+
+```base
+sysctl net.ipv4.tcp_available_congestion_control
+```
+返回值一般为：`net.ipv4.tcp_available_congestion_control = bbr cubic reno`或者：`net.ipv4.tcp_available_congestion_control = reno cubic bbr`
+
+3)
+
+```base
+sysctl net.ipv4.tcp_congestion_control
+```
+返回值一般为：`net.ipv4.tcp_congestion_control = bbr`
+
+4) 
+
+```base
+sysctl net.core.default_qdisc
+```
+返回值一般为：`net.core.default_qdisc = fq`
+
+5)
+
+```base
+lsmod | grep bbr
+```
+返回值有 tcp_bbr 模块即说明 bbr 已启动。比如：`tcp_bbr                20480  3`
+
+注意：并不是所有的 VPS 都会有此返回值，若没有也属正常。
+
+#### 特别说明
+如果使用的是 Google Cloud Platform （GCP）更换内核，有时会遇到重启后，整个磁盘变为只读的情况。只需执行以下命令即可恢复：
+
+```base
+mount -o remount rw /
+```
+
 ----------------------------------------------------------------------------
 
 # OpenVZ 加速 魔改 BBR – lkl-rinetd 一键脚本 安装及使用
