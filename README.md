@@ -24,24 +24,20 @@ chmod +x shadowsocks-all.sh
 
 ```
 
-> 选项2 (ssr)
-
-```base
-yum -y install wget
-
-wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
-
-./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
-```
-
 > 选项3
 
 ```base
 yum -y install wget
 
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh
+```
 
-./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+> 选项3 (ssr)
+
+```base
+yum -y install wget
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 
 ### 选择（推荐）
