@@ -24,7 +24,7 @@ chmod +x shadowsocks-all.sh
 
 ```
 
-> 选项3
+> 选项2
 
 ```base
 yum -y install wget
